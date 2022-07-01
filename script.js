@@ -102,10 +102,13 @@ buttonsToShowQuestions[0].addEventListener("click", e => {
 	buttonsToShowQuestions[0].disabled = true;
 
 	if (window.innerWidth < 576) {
-		buttonsToShowQuestions[0].setAttribute("style", "position: absolute; bottom: 569px");
+		buttonsToShowQuestions[0].setAttribute("style", "position: absolute; bottom: 724px");
+		buttonsToShowQuestions[1].onclick = () => {
+			buttonsToShowQuestions[1].setAttribute("style", "position: absolute; top: 534px;");
+		}
 	} else {
 		buttonsToShowQuestions[0].setAttribute("style", "position: absolute; bottom: 525px;");
-	}
+	} 
 
 	form.classList.add("form-shown");
 
@@ -126,10 +129,15 @@ buttonsToShowQuestions[1].addEventListener("click", e => {
 	buttonsToShowQuestions[1].disabled = true;
 
 	if (window.innerWidth < 576) {
-		buttonsToShowQuestions[1].setAttribute("style", "position: absolute; bottom: 355px;")
+		buttonsToShowQuestions[1].setAttribute("style", "position: absolute; bottom: 510px;");
+		buttonsToShowQuestions[0].onclick = () => {
+			buttonsToShowQuestions[1].setAttribute("style", "position: absolute; top: 534px;");
+		}		
 	} else {
 		buttonsToShowQuestions[1].setAttribute("style", "position: absolute; bottom: 525px;");
 	}
+
+
 
 	form.classList.add("form-shown");
 	divThatHoldsForm.classList.remove("removed-hover2");
@@ -145,9 +153,13 @@ buttonsToShowQuestions[2].addEventListener("click", e => {
 
 	if (window.innerWidth < 576) {
 		buttonsToShowQuestions[2].setAttribute("style", "position: absolute; top: 980px;");
+		buttonsToShowQuestions[3].onclick = () => {
+			buttonsToShowQuestions[3].setAttribute("style", "position: absolute; top: 1339px;");
+		}
 	} else {
 		buttonsToShowQuestions[2].setAttribute("style", "position: absolute; bottom: 83px;");
 	}
+
 
 	form.classList.add("form-shown");
 
@@ -166,8 +178,19 @@ buttonsToShowQuestions[3].addEventListener("click", e => {
 	const divThatHoldsForm = document.querySelector(".click4");
 	const form = document.querySelector(".question4");
 
+	if (window.innerWidth < 576) {
+		buttonsToShowQuestions[3].setAttribute("style", "position: absolute; top: 1182px;");
+		buttonsToShowQuestions[2].onclick = () => {
+			buttonsToShowQuestions[3].setAttribute("style", "position: absolute; top: 1339px;");
+		}
+	} else {
+		buttonsToShowQuestions[3].setAttribute("style", "position: absolute; bottom: 83px;");
+	}
+
+
+
+
 	buttonsToShowQuestions[3].disabled = true;
-	buttonsToShowQuestions[3].setAttribute("style", "position: absolute; bottom: -450px;");
 
 	form.classList.add("form-shown");
 	divThatHoldsForm.classList.remove("removed-hover4");
